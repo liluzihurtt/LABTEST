@@ -3,9 +3,20 @@ import pandas as pd
 import streamlit as st
 from sklearn.preprocessing import LabelEncoder
  
-# Load the trained model and encoders
 with open('model_penguin_66130700340.pkl', 'rb') as file:
-    model, species_encoder, island_encoder, sex_encoder = pickle.load(file)
+    # Only model_pipeline and species_encoder were saved
+    model_pipeline, species_encoder = pickle.load(file)
+
+# Create the encoders for island and sex since they weren't saved
+# Assuming island and sex are categorical features
+island_encoder = LabelEncoder()
+sex_encoder = LabelEncoder()
+ 
+# Fit the encoders to the data (using the original 'data' or a similar method)
+# Replace 'data' with your actual DataFrame containing the original data if it's not accessible
+# For example, you might need to reload the original data from the CSV file
+island_encoder.fit(data['island'])
+sex_encoder.fit(data['sex'])
  
 # Title of the app
 st.title('Predict Randomforest Penguin App')
