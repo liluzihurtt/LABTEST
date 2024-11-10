@@ -26,7 +26,7 @@ x_new['culmen_depth_mm']= [culmen_depth_mm]
 x_new['flipper_length_mm']= [flipper_length_mm]
 x_new['body_mass_g']= [body_mass_g]
 x_new['sex']= [sex]
-island_encoder.transform(x_new['island'])
+island_encoder.classes_
  
 # Transform the input data using the encoders
 x_new['island'] = island_encoder.transform(x_new['island'])
