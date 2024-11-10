@@ -2,14 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-# Load the trained model pipeline and encoders
-try:
-    with open('model_penguin_66130700340.pkl', 'rb') as file:
-        model_pipeline, species_encoder = pickle.load(file)
-    st.write("Model and encoders loaded successfully!")
-except Exception as e:
-    st.write("Error loading model and encoders:", e)
-
 # Streamlit UI elements
 st.title("Penguin Species Prediction")
 
