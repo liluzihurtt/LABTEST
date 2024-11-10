@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
  
 with open('model_penguin_66130700340.pkl', 'rb') as file:
     # Only model_pipeline and species_encoder were saved
-    model, species_encoder, sex_encoder, island_encoder = pickle.load(file)
+    model, species_encoder, island_encoder ,sex_encoder = pickle.load(file)
  
 # Title of the app
 st.title('Predict Randomforest Penguin App')
