@@ -27,11 +27,7 @@ input_data = pd.DataFrame({
     'sex': [sex]
 })
 
-# Preprocess the input data
-input_data['island'] = island_encoder.transform(input_data['island'])
-input_data['sex'] = sex_encoder.transform(input_data['sex'])
-
-# Make prediction
+# Make prediction using the loaded pipeline (including preprocessing)
 if st.button("Predict"):
     try:
         prediction = model.predict(input_data)
