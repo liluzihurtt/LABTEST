@@ -1,4 +1,3 @@
-%%writefile app_predict_penguin_66130700340.py
 import streamlit as st
 import pandas as pd
 import pickle
